@@ -46,8 +46,8 @@ async function readRawLogs(masterSalt,fileLocation) {
   const lineStream = readline.createInterface({input: fileStream, crlfDelay: Infinity});
   const prettyLogs = [];
   for await (const line of lineStream) {
-    if (line.length === 0) continue
     try {
+      if (line.length < 2) continue
       const log = JSON.parse(line);
       log.uniqueId = sha256(log.url);
       log.address = sha256.hmac(masterSalt, log.address);
