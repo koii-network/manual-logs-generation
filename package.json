@@ -2,7 +2,7 @@
   "name": "@_koi/logs",
   "version": "1.0.5-beta",
   "description": "Koi is a network designed to reward and help to coordinate the creation of public data resources. Install the SDK to register your gateway to the network and begin receiving traffic awards when you contribute logging data.",
-  "main": "dist/index.js",
+  "main": "hello.js",
   "scripts": {
     "lint": "eslint *.ts",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
